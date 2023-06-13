@@ -1,0 +1,174 @@
+
+.second-field{
+    height: 47vh;
+    background-color: red;
+}
+.phase-field{
+    height: 6vh;
+    background-color: yellow;
+}
+.first-field{
+    position: relative;
+    height: 47vh;
+    background-color: green;
+    overflow: hidden; 
+}
+.monster-field{
+    background-color: pink;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+}
+.monster-field .first,
+.monster-field .second,
+.monster-field .third,
+.monster-field .fourth {
+    background-color: yellow;
+    width: 25%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 20vh;
+    border: 1px solid black;
+}
+
+.card {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border: 1px solid black;
+    height: 20vh;
+    width:10%;
+    background-color: black;
+    animation-delay: 10s;
+    transition: transform 1s;
+}
+
+#summon-first-position {
+    transform: translate(-669%, 0%);
+}
+
+#summon-second-position {
+    transform: translate(-519%, 0%);
+}
+
+#summon-third-position {
+    transform: translate(-369%, 0%);
+}
+
+#summon-fourth-position {
+    transform: translate(-219%, 0%);
+}
+
+
+#draw-first-position {
+    transform: translate(-700%, 120%);
+}
+
+#draw-second-position {
+    transform: translate(-570%, 120%);
+}
+
+#draw-third-position {
+    transform: translate(-440%, 120%);
+}
+
+#draw-fourth-position {
+    transform: translate(-310%, 120%);
+}
+
+#draw-fifth-position {
+    transform: translate(-180%, 120%);
+}
+
+#draw-sixth-position {
+    transform: translate(-830%, 120%);
+}
+
+#draw-seventh-position {
+    transform: translate(-50%, 120%);
+}
+
+.draw1{
+    animation-name: draw-card-position-1;
+    animation-duration: 500ms;
+    animation-delay: 500ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.draw2{
+    animation-name: draw-card-position-2;
+    animation-duration: 500ms;
+    animation-delay: 1000ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.draw3{
+    animation-name: draw-card-position-3;
+    animation-duration: 500ms;
+    animation-delay: 1500ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.draw4{
+    animation-name: draw-card-position-4;
+    animation-duration: 500ms;
+    animation-delay: 2000ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.draw5{
+    animation-name: draw-card-position-5;
+    animation-duration: 500ms;
+    animation-delay: 2500ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.summon{
+    animation-name: summon-position-1;
+    animation-duration: 500ms;
+    animation-delay: 500ms; /* Set the delay to 10 seconds */
+    animation-timing-function: ease-in-out; /* Apply the ease-in timing function */
+    animation-fill-mode: forwards;
+}
+.back-cards{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border: 1px solid black;
+    height: 20vh;
+    width:10%;
+    background-color: red;
+    z-index:500;
+}
+@keyframes draw-card-position-1 {
+    100% {
+        transform: translate(-700%, 20%);
+    }
+}
+@keyframes draw-card-position-2 {
+    100% {
+        transform: translate(-570%, 20%);
+    }
+}
+@keyframes draw-card-position-3 {
+    100% {
+        transform: translate(-440%, 20%);
+    }
+}
+@keyframes draw-card-position-4 {
+    100% {
+        transform: translate(-310%, 20%);
+    }
+}
+@keyframes draw-card-position-5 {
+    100% {
+        transform: translate(-180%, 20%);
+    }
+}
+
+@keyframes summon-position-1 {
+    100% {
+        transform: translate(-180%, -20%);
+    }
+}
