@@ -141,6 +141,30 @@
     background-color: red;
     z-index:500;
 }
+
+.graveyard-field {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border: 1px solid black;
+    height: 20vh;
+    width:10%;
+    background-color: black;
+    animation-delay: 10s;
+    transition: transform 1s;
+}
+
+.profile-field {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    border: 1px solid black;
+    height: 10vh;
+    width:4%;
+    background-color: black;
+    animation-delay: 10s;
+    transition: transform 1s;
+}
 @keyframes draw-card-position-1 {
     100% {
         transform: translate(-700%, 20%);

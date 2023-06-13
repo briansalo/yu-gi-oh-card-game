@@ -9,6 +9,9 @@ import MonsterAttribute from '../helpers/monsterAttribute.js';
 
 </div>
 <div class="first-field">
+    <div class="graveyard-field">
+        Graveyard
+    </div>
     <div class="monster-field">
         <div class="first">
             first
@@ -29,12 +32,10 @@ import MonsterAttribute from '../helpers/monsterAttribute.js';
             draw a card
         </div>
         <div v-for="card in cards">
-       
             <div :class="'card card' + card.id" :ref="'card' + card.id"> 
                 <div style="height:20%">
                     {{card.id}}  {{MonsterAttribute(card.id).name}}
                 </div>
-
                 <div style="height:50%; line-height: normal">
                     {{MonsterAttribute(card.id).effectDescription}}
                 </div>
@@ -42,18 +43,19 @@ import MonsterAttribute from '../helpers/monsterAttribute.js';
                     {{card.attack}}
                     {{MonsterAttribute(card.id).type}}
                 </div>
-                <div >
-                    
+                <div>
                     <span v-if="card.effectStatus && !card.effectActivated" @click="activateEffect(card.id)"> Activate</span>
                     <span v-else-if="MonsterAttribute(card.id).attack <= 1500 && !card.summon" @click="summon(card.id)"> summon</span>
-
                 </div>
             </div>
-
         </div>
-        {{ lifePoints }}
     </div>
 
+    <div class="profile-field">
+        <div class="life-points">
+            {{ lifePoints }}
+        </div>
+    </div>
 
 </div>
 </template>
